@@ -16,11 +16,12 @@ public class TestJob implements  Job,Serializable {
 	private static final long serialVersionUID = 1L;
 	   
     @Autowired  
-    private IJobService jobService; 
-    
+    private IJobService jobService;
+
 	@Override
 	public void execute(JobExecutionContext context) throws JobExecutionException {
-		System.out.println(jobService);//注入jobService 执行相关业务操作
+		//注入jobService 执行相关业务操作
+		System.out.println(jobService);
 		System.out.println("任务执行成功");
 	}
 }
